@@ -1,0 +1,19 @@
+gcc -march=native -O3 -std=c++17 -DNSYS=2 -DQUAD -DNORMAL -Wall -I/usr/local/include -I/usr/local/include/eigen3 -I/usr/local/include/tsl -funroll-loops main_threads_omp_equ_corr.cpp -Wl,--start-group -lstdc++ -lm -l:liblzma.a -l:libglog.a -l:libgflags.a -ldl -pthread -l:libdouble-conversion.a -l:libfolly.a -l:libfmt.a -l:libjson11.a -fopenmp -fPIE -Wl,--end-group -o bose_quad_2.out
+# # 
+gcc -march=native -O3 -std=c++17 -DNSYS=4 -DSPARSE -DFERMI -DTHERMO -Wall -I/usr/local/include -I/usr/local/include/eigen3 -I/usr/local/include/tsl -funroll-loops main_omp_thermo.cpp -Wl,--start-group -lstdc++ -lm -l:liblzma.a -l:libglog.a -l:libgflags.a -ldl -pthread -l:libdouble-conversion.a -l:libfolly.a -l:libfmt.a -l:libjson11.a -fopenmp -fPIE -Wl,--end-group -o thermo_fermi_2.out
+# # 
+gcc -march=native -O3 -std=c++17 -DNSYS=2 -DQUAD -DNORMAL -DTHERMO -Wall -I/usr/local/include -I/usr/local/include/eigen3 -I/usr/local/include/tsl -funroll-loops main_omp_thermo.cpp -Wl,--start-group -lstdc++ -lm -l:liblzma.a -l:libglog.a -l:libgflags.a -ldl -pthread -l:libdouble-conversion.a -l:libfolly.a -l:libfmt.a -l:libjson11.a -fopenmp -fPIE -Wl,--end-group -o thermo_bose_quad_2.out
+# # 
+gcc -march=native -O3 -std=c++17 -DNSYS=4 -DQUAD -DSPARSE -DFERMI -DNORMAL -Wall -I/usr/local/include -I/usr/local/include/eigen3 -I/usr/local/include/tsl -funroll-loops main_threads_omp_equ_corr.cpp -Wl,--start-group -lstdc++ -lm -l:liblzma.a -l:libglog.a -l:libgflags.a -ldl -pthread -l:libdouble-conversion.a -l:libfolly.a -l:libfmt.a -l:libjson11.a -fopenmp -fPIE -Wl,--end-group -o fermi_quad_4.out
+# # 
+gcc -march=native -O3 -std=c++17 -DNSYS=2 -Wall -I/usr/local/include -I/usr/local/include/eigen3 -I/usr/local/include/tsl -funroll-loops main_threads_omp_equ_corr.cpp -Wl,--start-group -lstdc++ -lm -l:liblzma.a -l:libglog.a -l:libgflags.a -ldl -pthread -l:libdouble-conversion.a -l:libfolly.a -l:libfmt.a -l:libjson11.a -fopenmp -fPIE -Wl,--end-group -o bose_2.out
+# # 
+gcc -march=native -O3 -std=c++17 -DNSYS=2 -DNORMAL -Wall -I/usr/local/include -I/usr/local/include/eigen3 -I/usr/local/include/tsl -funroll-loops main_threads_omp_equ_corr.cpp -Wl,--start-group -lstdc++ -lm -l:liblzma.a -l:libglog.a -l:libgflags.a -ldl -pthread -l:libdouble-conversion.a -l:libfolly.a -l:libfmt.a -l:libjson11.a -fopenmp -fPIE -Wl,--end-group -o bose_2_normal.out
+# # 
+gcc -march=native -O3 -std=c++17 -DNSYS=4 -DSPARSE -DFERMI -DNORMAL -Wall -I/usr/local/include -I/usr/local/include/eigen3 -I/usr/local/include/tsl -funroll-loops main_threads_omp_equ_corr.cpp -Wl,--start-group -lstdc++ -lm -l:liblzma.a -l:libglog.a -l:libgflags.a -ldl -pthread -l:libdouble-conversion.a -l:libfolly.a -l:libfmt.a -l:libjson11.a -fopenmp -fPIE -Wl,--end-group -o fermi_4.out
+# # 
+gcc -march=native -O3 -std=c++17 -DNSYS=16 -DSPARSE -DFERMI -Wall -I/usr/local/include -I/usr/local/include/eigen3 -I/usr/local/include/tsl -funroll-loops main_threads_omp_equ_corr.cpp -Wl,--start-group -lstdc++ -lm -l:liblzma.a -l:libglog.a -l:libgflags.a -ldl -pthread -l:libdouble-conversion.a -l:libfolly.a -l:libfmt.a -l:libjson11.a -fopenmp -fPIE -Wl,--end-group -o fermi_16.out
+# # 
+gcc -march=native -O3 -std=c++17 -DNSYS=256 -DSPARSE -DFERMI -DNORMAL -Wall -I/usr/local/include -I/usr/local/include/eigen3 -I/usr/local/include/tsl -funroll-loops main_threads_omp_equ_corr.cpp -Wl,--start-group -lstdc++ -lm -l:liblzma.a -l:libglog.a -l:libgflags.a -ldl -pthread -l:libdouble-conversion.a -l:libfolly.a -l:libfmt.a -l:libjson11.a -fopenmp -fPIE -Wl,--end-group -o fermi_256.out
+# 
+gcc -march=native -O3 -std=c++17 -DNSYS=1024 -DSPARSE -DFERMI -DNORMAL -Wall -I/usr/local/include -I/usr/local/include/eigen3 -I/usr/local/include/tsl -funroll-loops main_threads_omp_equ_corr.cpp -Wl,--start-group -lstdc++ -lm -l:liblzma.a -l:libglog.a -l:libgflags.a -ldl -pthread -l:libdouble-conversion.a -l:libfolly.a -l:libfmt.a -l:libjson11.a -fopenmp -fPIE -Wl,--end-group -o fermi_1024.out
